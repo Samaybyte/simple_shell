@@ -13,10 +13,10 @@ unsigned int nbr_spaces(char *s)
         for (i = 0; s[i] != '\0'; i++)
         {
                 if (s[i]  == ' ')
-                        cmpt++;
-        }
+			cmpt++;
+	}
 
-        return (cmpt);
+	return (cmpt);
 }
 
 /**
@@ -32,23 +32,23 @@ char **stringToTokens(char *str)
 	int spaces = nbr_spaces(str);
 	char **tokens = malloc(sizeof(char *) * (spaces + 1));
 	char *token;
-	
+
 	if (!tokens)
 	{
 		fprintf(stderr, "sh: allocation error\n");
 		exit(1);
 	}
-	
+
 	token = strtok(str, separator);
-	
+
 	while (token != NULL)
 	{
 		tokens[i] = token;
 		token = strtok(NULL, separator);
 		i++;
 	}
-	
+
 	tokens[i] = NULL;
-	
+
 	return (tokens);
 }
