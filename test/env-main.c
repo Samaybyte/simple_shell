@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - prints the environment ucing the env parameter from the main function
+ * main - prints the environment using the env parameter from the main function
  *
  * Return: Always 0.
  */
